@@ -1,7 +1,7 @@
 // Cache-first service worker so the app works offline. Bump CACHE when files change.
-const CACHE = "migraine-v1";
+const CACHE = "migraine-v2";
 const FILES = ["./", "index.html", "styles.css", "config.js", "hit6.js", "db.js", "report.js", "app.js",
-  "manifest.json", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png"];
+  "manifest.json", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "fonts/nunito-latin-wght.woff2"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim()));

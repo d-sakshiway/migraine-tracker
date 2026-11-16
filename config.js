@@ -23,7 +23,7 @@ function painColor(n) { return BAND_COLORS[painBand(n)]; }
 // d = definition shown in the doctor report key (only where the label needs explaining)
 const SYMPTOM_GROUPS = [
   { name: "Head and face", items: [
-    { l: "Left side head" }, { l: "Right side head" }, { l: "Back of head" },
+    { l: "Whole head" }, { l: "Left side head" }, { l: "Right side head" }, { l: "Back of head" },
     { l: "Forehead" }, { l: "Top of head" },
     { l: "Throbbing/pulsing" },
     { l: "Pressure behind the eyes" },
