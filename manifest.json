@@ -1,6 +1,6 @@
 {
-  "name": "Migraine Tracker",
-  "short_name": "Migraine",
+  "name": "Migraine Diary",
+  "short_name": "Migraine Diary",
   "description": "Private migraine diary that stores everything on your phone",
   "start_url": "./index.html",
   "scope": "./",
