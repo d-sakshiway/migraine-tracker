@@ -518,6 +518,7 @@ $("#tabs").addEventListener("click", ev => {
 });
 (async function init() {
   setTheme(getTheme());
+  if (/netlify\.app$/.test(location.hostname)) document.documentElement.classList.add("on-netlify");
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
   await renderLog();
