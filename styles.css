@@ -178,7 +178,7 @@ label.check { display: flex; margin: 0; color: var(--text); font-size: 16px; }
 input[type="month"] { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; width: 100%; }
 
 /* Netlify's free plan overlays a "Powered by Netlify" badge at the bottom; lift the tab bar above it (netlify.app only) */
-html.on-netlify #tabs { bottom: 64px; padding-bottom: 0; border-bottom: 1px solid var(--line); z-index: 6; }
-html.on-netlify body::after { content: ""; position: fixed; left: 0; right: 0; bottom: 0; height: 64px; background: var(--bg); z-index: 5; }
-html.on-netlify #app { padding-bottom: 150px; }
-html.on-netlify #toast { bottom: 160px; }
+html.on-netlify #tabs { bottom: 92px; padding-bottom: 0; border-bottom: 1px solid var(--line); z-index: 6; }
+html.on-netlify body::after { content: ""; position: fixed; left: 0; right: 0; bottom: 0; height: 92px; background: var(--bg); z-index: 5; }
+html.on-netlify #app { padding-bottom: 180px; }
+html.on-netlify #toast { bottom: 190px; }
