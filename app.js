@@ -295,7 +295,7 @@ async function renderCalendar() {
     <div class="legend"><span><i class="sq"></i>Period</span>
       ${[1, 2, 3, 4].map(b => `<span><i style="background:${BAND_COLORS[b]}"></i>${BAND_NAMES[b]}</span>`).join("")}</div>
     <div style="height:14px"></div>
-    ${state.selDate ? `<h2>${fmtDate(state.selDate)}</h2>${dayEntries.length ? dayEntries.map(e => entryCard(e)).join("") : '<div class="muted">No entries this day.</div>'}` : '<div class="muted">Tap a day to see its entries.</div>'}
+    ${state.selDate ? `<h2>${fmtDate(state.selDate)} <span style="text-transform:none;letter-spacing:0;font-weight:400">(tap the day again to hide)</span></h2>${dayEntries.length ? dayEntries.map(e => entryCard(e)).join("") : '<div class="muted">No entries this day.</div>'}` : '<div class="muted">Tap a day to see its entries.</div>'}
   `;
 }
 $("#view-cal").addEventListener("click", ev => {
@@ -306,7 +306,7 @@ $("#view-cal").addEventListener("click", ev => {
     let mm = c.m + delta, yy = c.y;
     if (mm < 1) { mm = 12; yy--; } if (mm > 12) { mm = 1; yy++; }
     state.cal = { y: yy, m: mm }; renderCalendar();
-  } else if (b.dataset.d) { state.selDate = b.dataset.d; renderCalendar(); }
+  } else if (b.dataset.d) { state.selDate = state.selDate === b.dataset.d ? null : b.dataset.d; renderCalendar(); }
   else if (b.id === "all-rec") openPage("All records", pageRecords);
 });
 
