@@ -7,6 +7,8 @@ A private, personal migraine diary that runs as an installable web app (PWA) on 
 
 ---
 
+**New to the app?** Open **More > How to use this app** inside it for a built-in guide (FAQ, pain scale and label meanings). It has a **Save this guide as PDF** button, so you can share it as a file too.
+
 ## Contents
 1. [What it does](#what-it-does)
 2. [Install on Android](#install-on-android)
@@ -198,6 +200,7 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies.
 | `config.js` | Pain scale text and colours, symptoms, triggers, yes/no questions. Edit wording here |
 | `hit6.js` | HIT-6 questions, scoring and categories |
 | `db.js` | IndexedDB wrapper (stores: entries, periods, hit6, custom) and IST date/time helpers |
+| `help.js` | The in-app "How to use" guide (FAQ text lives here) |
 | `report.js` | Doctor report HTML, CSV and legend |
 | `styles.css` | Styling, themes, Netlify badge workaround |
 | `sw.js` | Service worker (network first, offline fallback) |
@@ -212,4 +215,4 @@ Then open http://localhost:8000. Service workers need localhost or HTTPS.
 
 **Deploy:** connect the repo to Netlify (or Cloudflare Pages) with no build command and publish directory `.`. Pushing to `main` redeploys.
 
-**After changing app files**, bump `CACHE` in `sw.js` (currently `migraine-v8`) so installed copies update. If you add files, add them to the `FILES` list there too.
+**After changing app files**, bump `CACHE` in `sw.js` (currently `migraine-v9`) so installed copies update. If you add files, add them to the `FILES` list there too.

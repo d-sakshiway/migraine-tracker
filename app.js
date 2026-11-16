@@ -319,6 +319,7 @@ function renderMore() {
     <button class="menu-btn" data-go="hit6">Monthly HIT-6 check-in</button>
     <button class="menu-btn" data-go="insights">Insights</button>
     <button class="menu-btn" data-go="export">Export and doctor report</button>
+    <button class="menu-btn" data-go="help">How to use this app</button>
     <h2>Theme</h2>
     <div class="seg3">${["light", "dark", "system"].map(x => `<button data-theme="${x}" class="${t === x ? "on" : ""}">${x[0].toUpperCase() + x.slice(1)}</button>`).join("")}</div>
     <p class="muted" style="margin-top:24px">All data is stored only on this phone. Export a backup now and then.</p>`;
@@ -331,6 +332,7 @@ $("#view-more").addEventListener("click", ev => {
   else if (b.dataset.go === "hit6") openPage("Monthly check-in", pageHit6);
   else if (b.dataset.go === "insights") openPage("Insights", pageInsights);
   else if (b.dataset.go === "export") openPage("Export", pageExport);
+  else if (b.dataset.go === "help") openPage("How to use", pageHelp);
 });
 
 /* ---------- pages (overlay with back stack) ---------- */

@@ -1,6 +1,6 @@
 // Service worker so the app works offline. Bump CACHE when files change.
-const CACHE = "migraine-v8";
-const FILES = ["./", "index.html", "styles.css", "config.js", "hit6.js", "db.js", "report.js", "app.js",
+const CACHE = "migraine-v9";
+const FILES = ["./", "index.html", "styles.css", "config.js", "hit6.js", "db.js", "report.js", "help.js", "app.js",
   "manifest.json", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "fonts/nunito-latin-wght.woff2"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => {
